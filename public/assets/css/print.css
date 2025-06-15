@@ -1,0 +1,99 @@
+
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+
+        #print-section,
+        #print-section * {
+            visibility: visible;
+        }
+
+        #print-section {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        table {
+            page-break-inside: auto;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 16pt;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black !important;
+        }
+    }
+
+    .print-container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    .header-left-top {
+        float: left;
+        font-weight: bold;
+        font-size: 18pt;
+    }
+
+    .header-right-top {
+        float: right;
+        font-weight: bold;
+        font-size: 18pt;
+    }
+
+    .footer-left-bottom {
+        position: fixed;
+        bottom: 10px;
+        left: 30px;
+        font-size: 12pt;
+    }
+
+    .footer-right-bottom {
+        position: fixed;
+        bottom: 10px;
+        right: 30px;
+        font-size: 12pt;
+    }
+
+    .judul-laporan {
+        clear: both;
+        text-align: center;
+        font-size: 24pt;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+
+    table th {
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .no {
+        text-align: center;
+    }
+
+    .nisn {
+        text-align: center;
+    }
+
+    .nama {
+        text-align: left;
+    }
+
+    .total {
+        text-align: center;
+        font-weight: bold;
+    }
