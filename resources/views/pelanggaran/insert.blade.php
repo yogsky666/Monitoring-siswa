@@ -29,12 +29,19 @@
                         </div>
                         <br>
                         <div>
-                            <label for="id_sanksi" class="block mb-2 text-sm font-bold text-gray-700">KODE
-                                PELANGGARAN</label>
-                            <input type="text" name="id_sanksi" id="id_sanksi"
+                            <label for="id_sanksi" class="block mb-2 text-sm font-bold text-gray-700">SANKSI</label>
+                            <select name="id_sanksi" id="id_sanksi"
                                 class="focus:shadow-primary-outline text-sm focus:border-blue-500 block w-xl rounded-lg border border-gray-300 bg-white p-3 leading-5 text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:ring"
-                                placeholder="Kode Pelanggar" required value="{{ old('id_sanksi') }}">
-                            @error('nisn')
+                                required>
+                                <option value="">-- Pilih Sanksi --</option>
+                                @foreach ($sanksi as $item)
+                                    <option value="{{ $item->id }}"
+                                        {{ old('id_sanksi') == $item->id ? 'selected' : '' }}>
+                                        {{ $item->desk_kesalahan }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('id_sanksi')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>

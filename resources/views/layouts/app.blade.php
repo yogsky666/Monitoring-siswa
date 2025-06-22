@@ -37,7 +37,6 @@
         <!-- Content -->
 
     </main>
-    @include('layouts.sidenav')
 </body>
 @include('layouts.script')
 

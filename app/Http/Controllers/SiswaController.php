@@ -77,7 +77,7 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nisn' => 'required|exists:user,username',
             'id_kelas' => 'required|exists:kelas,kode_kelas',
         ]);
